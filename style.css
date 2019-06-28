@@ -1,0 +1,42 @@
+/* html, body {
+    height: 100%;
+    width: 100%;
+} */
+
+* {
+    border: 1px solid red;
+}
+.title {
+    text-align: center;
+}
+.list {
+    text-align: center;
+}
+.adds {
+    text-align: center;
+}
+ul {
+    list-style-position: inside;
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.container-main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+.clear {
+    margin-right: 1em;
+}
+
+#clearAll {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
