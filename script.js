@@ -1,6 +1,8 @@
 var input = document.getElementById("typeitem")
 var button = document.getElementById("addItem")
 var ul = document.querySelector("ul")
+var deleteLi = document.getElementById("deleteondbl")
+
 
 function inputLength() {
     return input.value.length;
@@ -8,7 +10,6 @@ function inputLength() {
 function createListElement() {
     var li = document.createElement("li");
     li.appendChild(document.createTextNode(input.value));
-
     ul.appendChild(li);
     input.value = "";
 }
@@ -30,16 +31,11 @@ ul.onclick = function(event) {
     var target = getEventTarget(event);
     target.classList.toggle("done");
 }
+deleteLi.ondblclick = function(event) {
+    var target = getEventTarget(event);
+    event.target.parentNode.removeChild(target);
+}
 
-//below code to remove item on dblclick is broken, currently removing entire parent ul and not adding any after
 
-
-// function removeParent (evt) {
-//     evt.target.removeEventListener("dblclick", removeParent, false);
-//     evt.target.parentNode.remove();
-// }
-// ul.ondblclick = function(event) {
-//     event.target.parentNode.remove();
-// }
 button.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress);
