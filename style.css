@@ -3,9 +3,7 @@
     width: 100%;
 } */
 
-* {
-    border: 1px solid red;
-}
+
 .title {
     text-align: center;
 }
@@ -16,7 +14,7 @@
     text-align: center;
 }
 ul {
-    list-style-position: inside;
+    list-style: none;
 }
 footer {
     position: fixed;
@@ -39,4 +37,11 @@ footer {
 #clearAll {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+.done {
+    text-decoration: line-through;
+}
+li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
