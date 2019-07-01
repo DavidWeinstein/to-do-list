@@ -14,8 +14,6 @@ function deleteChild() {
     }
 }
 
-
-
 function inputLength() {
     return input.value.length;
 }
