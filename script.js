@@ -2,17 +2,10 @@ var input = document.getElementById("typeitem")
 var button = document.getElementById("addItem")
 var ul = document.querySelector("ul")
 var deleteLi = document.getElementById("deleteondbl")
-var clearAll = document.getElementById("clearAll").onclick = function() {
-    deleteChild();
-}
 
-function deleteChild() {
-    var child = ul.lastElementChild;
-    while (child) {
-        ul.removeChild(child);
-        child = ul.lastElementChild;
-    }
-}
+// function deleteChild() {
+//     ul.innerHTML = "";
+// }
 
 function inputLength() {
     return input.value.length;
@@ -49,3 +42,6 @@ deleteLi.ondblclick = function(event) {
 
 button.addEventListener("click", addListAfterClick);
 input.addEventListener("keypress", addListAfterKeypress);
+document.getElementById("clearAll").onclick = function() {
+    ul.innerHTML = "";
+}
